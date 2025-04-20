@@ -1,9 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Hello Page</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Client Project Upload</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Hello</h1>
+  <div class="container">
+    <h1>Upload Your Project</h1>
+    <input type="file" id="fileInput" />
+    <button onclick="uploadFile()">Upload</button>
+
+    <h2>Uploaded Projects</h2>
+    <button onclick="sortProjects()">Sort by Date</button>
+    <ul id="projectList"></ul>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
