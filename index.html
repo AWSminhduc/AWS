@@ -4,33 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Client Project Upload</title>
-  <link rel="stylesheet" href="style.css">
-
-  <!-- Load AWS Amplify from CDN -->
-  <script src="https://unpkg.com/aws-amplify@5.0.4/dist/aws-amplify.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- LOGIN / SIGNUP SECTION -->
-  <div id="auth" class="container">
-    <h2>Login</h2>
-    <input id="email" placeholder="Email" /><br><br>
-    <input id="password" type="password" placeholder="Password" /><br><br>
-    <button onclick="signIn()">Sign In</button>
-    <button onclick="signUp()">Sign Up</button>
-    <p id="authOutput"></p>
-  </div>
-
-  <!-- PROJECT UPLOAD SECTION (hidden initially) -->
-  <div id="app" class="container" style="display: none;">
-    <h2>Welcome <span id="userEmail"></span></h2>
+  <div class="container">
+    <h1>Upload Your Project</h1>
     <input type="file" id="fileInput" />
     <button onclick="uploadFile()">Upload</button>
 
     <h2>Uploaded Projects</h2>
     <button onclick="sortProjects()">Sort by Date</button>
     <ul id="projectList"></ul>
-
-    <button onclick="signOut()">Sign Out</button>
   </div>
 
   <script src="script.js"></script>
