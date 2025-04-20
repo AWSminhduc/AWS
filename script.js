@@ -35,3 +35,19 @@ function sortProjects() {
   projects.sort((a, b) => new Date(b.date) - new Date(a.date));
   renderProjects();
 }
+
+// Replace these with your actual Cognito details
+const awsConfig = {
+  Auth: {
+    region: 'ca-central-1',
+    userPoolId: 'ca-central-1_klQTY4gA6',
+    userPoolWebClientId: '6ogqvaaa36p5fv3rqde6co7dln',
+  },
+  Storage: {
+    region: 'ca-central-1',
+    bucket: 'ps-storage1',
+    identityPoolId: 'YOUR_IDENTITY_POOL_ID', // if using Identity Pool
+  }
+};
+
+Amplify.default.configure(awsConfig);
